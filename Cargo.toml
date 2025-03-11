@@ -1,6 +1,7 @@
 [workspace]
 members = [
-    "goldilocks"
+    "goldilocks",
+    "multilinear_extensions"
 ]
 resolver = "2"
 

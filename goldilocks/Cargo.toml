@@ -13,6 +13,5 @@ subtle.workspace = true
 
 
 [dev-dependencies]
-criterion.workspace = true
 rand_xorshift.workspace = true
 ark-std.workspace = true
