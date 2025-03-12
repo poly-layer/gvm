@@ -7,10 +7,11 @@ license.workspace = true
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+ark-ff = "0.4.0"
 ff.workspace = true
 ark-std.workspace = true
 rayon.workspace = true
-multilinear_extensions = { path = "../multilinear_extensions" }
-
-[dev-dependencies]
+serde.workspace = true
 goldilocks = { path = "../goldilocks" }
+multilinear_extensions = { path = "../multilinear_extensions" }
+transcript = { path = "../transcript" }

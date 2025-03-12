@@ -4,8 +4,11 @@ use ark_std::test_rng;
 use ff::{PrimeField, Field};
 use goldilocks::Goldilocks as F;
 
-use crate::{virtual_poly::{VirtualPolynomial, build_eq_x_r}, mle::DenseMultilinearExtension, util::bit_decompose};
-
+use crate::{
+    mle::DenseMultilinearExtension,
+    util::bit_decompose,
+    virtual_poly::{VirtualPolynomial, build_eq_x_r},
+};
 
 #[test]
 fn test_virtual_polynomial_additions() {
@@ -35,7 +38,7 @@ fn test_virtual_polynomial_mul_by_mle()  {
             let base: Vec<F> = (0..nv).map(|_| F::random(&mut rng)).collect();
 
             let (a, _a_sum) = VirtualPolynomial::<F>::random(nv, (2, 3), num_products, &mut rng);
-            let (b, _b_sum) = DenseMultilinearExtension::<F>:: random_mle_list(nv, 1, &mut rng);
+            let (b, _b_sum) = DenseMultilinearExtension::<F>::random_mle_list(nv, 1, &mut rng);
             let b_mle = b[0].clone();
             let coeff = F::random(&mut rng);
             let b_vp = VirtualPolynomial::new_from_mle(&b_mle, coeff);
