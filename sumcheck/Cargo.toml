@@ -1,5 +1,5 @@
 [package]
-name = "goldilocks"
+name = "sumcheck"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
@@ -8,11 +8,9 @@ license.workspace = true
 
 [dependencies]
 ff.workspace = true
-rand_core.workspace = true
-subtle.workspace = true
-serde.workspace = true
-
+ark-std.workspace = true
+rayon.workspace = true
+multilinear_extensions = { path = "../multilinear_extensions" }
 
 [dev-dependencies]
-rand_xorshift.workspace = true
-ark-std.workspace = true
+goldilocks = { path = "../goldilocks" }

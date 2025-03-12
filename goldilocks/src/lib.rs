@@ -2,8 +2,11 @@
 //! Credit: the majority of the code is borrowed or inspired from Plonky2 with modifications.
 
 pub use fp::Goldilocks;
+pub use field::SmallField;
+
 mod fp;
 mod util;
 
 #[cfg(test)]
 mod tests;
+mod field;

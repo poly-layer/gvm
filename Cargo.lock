@@ -97,6 +97,7 @@ dependencies = [
  "ff",
  "rand_core",
  "rand_xorshift",
+ "serde",
  "subtle",
 ]
 
@@ -124,6 +125,10 @@ checksum = "071dfc062690e90b734c0b2273ce72ad0ffa95f0c74596bc250dcfd960262841"
 dependencies = [
  "autocfg",
 ]
+
+[[package]]
+name = "poseidon"
+version = "0.1.0"
 
 [[package]]
 name = "ppv-lite86"
@@ -214,10 +219,41 @@ dependencies = [
 ]
 
 [[package]]
+name = "serde"
+version = "1.0.219"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5f0e2c6ed6606019b4e29e69dbaba95b11854410e5347d525002456dbbb786b6"
+dependencies = [
+ "serde_derive",
+]
+
+[[package]]
+name = "serde_derive"
+version = "1.0.219"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5b0276cf7f2c73365f7157c8123c21cd9a50fbbd844757af28ca1f5925fc2a00"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "subtle"
 version = "2.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "13c2bddecc57b384dee18652358fb23172facb8a2c51ccc10d74c157bdea3292"
+
+[[package]]
+name = "sumcheck"
+version = "0.1.0"
+dependencies = [
+ "ark-std",
+ "ff",
+ "goldilocks",
+ "multilinear_extensions",
+ "rayon",
+]
 
 [[package]]
 name = "syn"
@@ -235,6 +271,16 @@ name = "tap"
 version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "55937e1799185b12863d447f42597ed69d9928686b8d88a1df17376a097d8369"
+
+[[package]]
+name = "transcript"
+version = "0.1.0"
+dependencies = [
+ "ark-std",
+ "ff",
+ "goldilocks",
+ "rayon",
+]
 
 [[package]]
 name = "unicode-ident"

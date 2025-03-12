@@ -2,7 +2,7 @@
 members = [
     "goldilocks",
     "multilinear_extensions"
-]
+, "poseidon", "sumcheck", "transcript"]
 resolver = "2"
 
 [workspace.package]
@@ -17,3 +17,4 @@ subtle = "2.2.1"
 rand_xorshift = "0.3"
 ark-std = { version = "0.4", features = ["print-trace"] }
 rayon = "1.8"
+serde = { version = "1.0.219", features = ["derive"] }
