@@ -3,7 +3,8 @@ use std::cmp::max;
 use ff::PrimeField;
 use rayon::{prelude::ParallelIterator, slice::ParallelSliceMut};
 
-pub(crate) fn barycentric_weights<F: PrimeField>(points: &[F]) -> Vec<F> {
+// wi = 1 / ∏ j!=i (xi−xj)
+pub(crate) fn barycentric_weights<F: PrimeField + std::fmt::Display>(points: &[F]) -> Vec<F> {
     let mut weights = points
         .iter()
         .enumerate()

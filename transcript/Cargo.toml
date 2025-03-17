@@ -11,6 +11,4 @@ ff.workspace = true
 ark-std.workspace = true
 rayon.workspace = true
 serde.workspace = true
-
-[dev-dependencies]
 goldilocks = { path = "../goldilocks" }

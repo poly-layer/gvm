@@ -1,7 +1,6 @@
 use std::sync::Arc;
 
 use ark_std::{end_timer, start_timer};
-use ff::PrimeField;
 use goldilocks::SmallField;
 use multilinear_extensions::{mle::DenseMultilinearExtension, virtual_poly::VirtualPolynomial};
 use rayon::prelude::{IntoParallelIterator, IntoParallelRefIterator, ParallelIterator};

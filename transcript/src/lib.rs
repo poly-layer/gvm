@@ -1,9 +1,8 @@
 //! This repo is not properly implemented
 //! Transcript APIs are placeholders; the actual logic is to be implemented later.
 
-use std::marker::PhantomData;
-use goldilocks::SmallField;
 use serde::Serialize;
+use goldilocks::SmallField;
 
 // temporarily using 12-4 hashes
 pub const INPUT_WIDTH: usize = 12;
@@ -36,7 +35,7 @@ impl<F: SmallField> Transcript<F> {
         println!("mock function. remember to fix me");
     }
 
-    // Append the field elemetn to the transcript.
+    // Append the field element to the transcript.
     pub fn append_field_element(&mut self, element: F) {
         // TODO!
         println!("mock function. remember to fix me");

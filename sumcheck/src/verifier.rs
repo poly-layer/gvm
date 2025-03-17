@@ -4,7 +4,21 @@ use goldilocks::SmallField;
 use multilinear_extensions::virtual_poly::VPAuxInfo;
 use transcript::{Challenge, Transcript};
 
-use crate::structs::{IOPProverMessage, IOPVerifierState};
+use crate::structs::{IOPProverMessage};
+
+
+/// Verifier State of a PolyIOP
+pub struct IOPVerifierState<F: SmallField> {
+    pub(crate) round: usize,
+    pub(crate) num_vars: usize,
+    pub(crate) max_degree: usize,
+    pub(crate) finished: bool,
+    /// a list storing the uni variate polynomial in evaluation form sent by the
+    /// prover at each round
+    pub(crate) polynomials_received: Vec<Vec<F>>,
+    /// a list storing the randomness sampled by the verifier at each round
+    pub(crate) challenges: Vec<Challenge<F>>,
+}
 
 impl<F: SmallField> IOPVerifierState<F> {
     /// Initialize the verifier's state.
